@@ -331,6 +331,10 @@ article.post a img {
 	article.cat div.content {
 		flex: 1 1 60%;
 	}
+
+	article.post a img {
+		width: 100%;
+	}
 	
 }
 
