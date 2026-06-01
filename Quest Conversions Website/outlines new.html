@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Quest Conversions</title>
+		<link href="p_styles.css" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<a id="top"></a>
+		<header>
+			<nav class="horizontal">
+				<a id="navicon" href="#"><img src="https://img.icons8.com/ios/30/000000/menu--v4.png"/></a>
+				<ul>
+					<li><a href="category selection.html">Categories</a></li>
+					<li><a href="About.html">About</a></li>
+					<li><a href="https://discord.gg/v8emjf2Pkk" target="blank">Discord</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<article>
+			<h1><a href="Gimmicks.html">Gimmicks</a></h1>
+		</article>
+		
+		<article class="title">
+			<h2>Outlines &lpar;New&rpar;</h2>
+			<img src="img/outlines.png" alt="" />
+		</article>
+		
+		<article class="body">
+			<p>Use this free tool - <a href="https://booth.pm/en/items/5991591" target="blank">Booth</a> - to create PC looking outlines for quest.
+			 Each outline is a duplicate copy of the mesh it is covering, so be mindful of your polygon count 
+			 and upload size.</p>
+			 <p>The tool is in japanese, but you can mostly memorize the options as it isn't complicated.</p>
+			 <img src="img/outline translation.png" alt="" />
+			 <p>To create an outline, click on the mesh in the hierarchy and then click generate outline</p>
+			 <img class="wide" src="img/generate outline.png" alt="" />
+			 <p>its going to try to save the asset somewhere stupid, so just make sure to find your project folder 
+			 and save it somewhere in Assets there</p>
+			 <img src="img/outline save.png" alt="" />
+			 <p>I recommend making a folder for every avatar in the project in the tool's folder. The path would 
+			 be &lpar;project name&rpar; &gt; Assets &gt; nfya &gt; OutlineCreate &gt; Assets &gt; &lpar;avatar name&rpar; 
+			 &gt; outline.asset</p>
+			 <img class="wide" src="img/outline save1.png" alt="" />
+			 <p>The tool will add the outline asset in the hierarchy under the same parent as the original mesh</p>
+			 <img src="img/outlinefind.png" alt="" />
+			 <p>For toggles to work properly, click and drag the outline to be under the original mesh, like this</p>
+			 <ul class="gallery2">
+				<li>
+					<img src="img/outline move1.png" alt="" />
+				</li>
+				<li>
+					<img src="img/outline move2.png" alt="" />
+				</li>
+			 </ul>
+			 <p>If you are doing the outlines for something like the face, or any mesh that has blendshapes animated, 
+			 you want to add a VRCFury blendshape link to the outline asset. </p>
+			 <img class="wide" src="img/blendshape link.png" alt="" />
+			 <p>Add a blendshape link component to the outline asset in the inspector, and type the name of 
+			 the original mesh in the box under &CloseCurlyDoubleQuote;Name of skinned mesh object in avatar:&CloseCurlyDoubleQuote;. 
+			 Then click the + and drag the outline into the box under &CloseCurlyDoubleQuote;Skinned meshes to link:&CloseCurlyDoubleQuote;</p>
+			 <p>The default material for the outline will be a standard lite material called outLine, but you can set whatever 
+			 material you want in Element 0 on the outline asset.</p>
+			 <img src="img/outline mat.png" alt="" />
+			 <p>I keep all my outline materials in the nyfa folder with outLine.</p>
+			 <img class="wide" src="img/outlines all.png" alt="" />
+		</article>
+		
+		<footer>
+			
+		</footer>
+	</body>
+
+</html>
