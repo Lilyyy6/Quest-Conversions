@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Quest Conversions</title>
+		<link href="p_styles.css" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<a id="top"></a>
+		<header>
+			<nav class="horizontal">
+				<a id="navicon" href="#"><img src="https://img.icons8.com/ios/30/000000/menu--v4.png"/></a>
+				<ul>
+					<li><a href="category selection.html">Categories</a></li>
+					<li><a href="About.html">About</a></li>
+					<li><a href="https://discord.gg/v8emjf2Pkk" target="blank">Discord</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<article>
+			<h1><a href="Gimmicks.html">Gimmicks</a></h1>
+		</article>
+		
+		<article class="title">
+			<h2>Parallax &lpar;No Blender&rpar;</h2>
+			<img src="img/parallax.gif" alt="" />
+		</article>
+		
+		<article class="body">
+			<p>This is a full in-depth tutorial of a short description shared by a discord member in another post. This only encompasses 
+			the first part of the post, with the unity-only parallax effect with only one layer that gives the chowder effect.</p>
+			
+			<p>First, you need to find the fbx of the mesh you want to have the efffect. Click on the mesh in the hierarchy, and 
+			click the mesh in the inspector. This will bring you to the fbx in Assets.</p>
+			<img class="wide" src="img/find fbx.png" alt="" />
+			<p>You can click on the arrow to close the fbx in Assets, and then click on the fbx and Ctrl + d to 
+			duplicate it.</p>
+			<img src="img/ctrld.png" alt="" />
+			<p>Click on the duplicated fbx, and in the inspector go to Model</p>
+			<img src="img/model.png" alt="" />
+			<p>Scroll down and find the normals setting, and set it to None. Then click Apply</p>
+			<img src="img/normals none.png" alt="" />
+			<p>Now, find the mesh named the same as the original mesh on the object you want the effect on. Look through 
+			the new fbx that we duplicated and edited.</p>
+			<img src="img/fbx.png" alt="" />
+			<img class="wide" src="img/match mesh.png" alt="" />
+			<p>Click and drag that mesh into the mesh slot on the object.</p>
+			<img class="wide" src="img/move mesh.png" alt="" />
+			<p>Now, set the material of the object to have a matcap. The matcap should be the image you want parallaxed. 
+			This will create the effect.</p>
+			<img class="wide" src="img/matcap.png" alt="" />
+			<p>If you have multiple objects using the same fbx that you want to have the parallax effect, you can 
+			simply use the duplicated fbx to find the matching meshes for those objects. You don't have to keep duplicating 
+			the same fbx for each object. Each fbx only needs one duplicate. This will create the chowder effect you want 
+			for quest.</p>
+		</article>
+		
+		<footer>
+			<a class="button" href="#top"><p>To Top</p></a>
+		</footer>
+	</body>
+
+</html>
