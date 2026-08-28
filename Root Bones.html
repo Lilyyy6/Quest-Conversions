@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Quest Conversions</title>
+		<link href="p_styles.css" rel="stylesheet" />
+	</head>
+	
+	<body>
+		<a id="top"></a>
+		<header>
+			<nav class="horizontal">
+				<a id="navicon" href="#"><img src="https://img.icons8.com/ios/30/000000/menu--v4.png"/></a>
+				<ul>
+					<li><a href="category selection.html">Categories</a></li>
+					<li><a href="About.html">About</a></li>
+					<li><a href="https://discord.gg/v8emjf2Pkk" target="blank">Discord</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<article>
+			<h1><a href="Test.html">Physbones</a></h1>
+		</article>
+		
+		<article class="title">
+			<h2>Use Root Bones for Physbone Components</h2>
+			<img src="img/rootBones.png" alt="" />
+		</article>
+		
+		<article class="body">
+			<p>To reduce components, use root bones to combine multiple physbone components with the same settings that 
+			also share a parent.</p>
+			<img src="img/rootExample.png" alt="" />
+			<p>Instead of having a physbone AlienTenticleL and AlienTenticleR, just put one physbone component on Tenticle Root. 
+			This will apply the physbone to both child strands of bones.</p>
+			<p>No root bone? Just make one. Find the parent bone of the bones you want to make a root for, then Right click that 
+			bone and create empty.</p>
+			<img src="img/createEmpty.png" src="" /> 
+			<p>Name the bone root, or something like that.</p>
+			<img src="img/root.png" alt="" />
+			<p>Then drag the bone strands you want in the root onto the root bone (you may need to unpack the prefab your avatar 
+			for this). **Only unpack the prefab if you will not need to enter blender for this avatar** (If you need to use blender 
+			for the avatar, please add a root bone in blender instead, and parent the bones properly there).</p>
+			<p>**When unpacking the prefab, you will no longer be able to import changes from blender directly**</p>
+			<img class="wide" src="img/unpack.png" alt="" />
+			<img src="img/reparent.png" alt="" />
+			<p>Add a physbone component to the root bone, and copy the settings of one of the child bones and paste them on 
+			root bone.</p>
+			<img src="img/pastebone.png" alt="" />
+			<p>Then delete the physbone components on the child bones.</p>
+			
+		</article>
+		
+		<footer>
+			<a class="button" href="#top"><p>To Top</p></a>
+		</footer>
+	</body>
+
+</html>
