@@ -28,6 +28,119 @@
 		<article class="body">
 			<p>This website is still a major work in progress. Some buttons will not work and some pages are not yet created. 
 			Join the discord to see all the Quest Conversion tips. </p>
+			
+			<h2>How do I Quest Convert?</h2>
+			<p>Here is a manual quest conversion explination</p>
+			<p><b>this page is a wip, reference the full document here</b></p>
+			<a class="button" src="https://docs.google.com/document/d/1j_kHDowvRsqm2bKl2caD5z3Fe60k0HPEdK86gYKvlFM/edit?usp=sharing" target="blank"><p>Full Document (google docs)</p></a>
+			<p style="color:green;"><b>Step 1: Finish the PC version</b></p>
+			<p>This will make things easier.</p>
+			<p style="color:green;"><b>Step 2: Prefab</b></p>
+			<p>Make sure all the stuff you added to the PC avatar is saved to a prefab (this makes updating the avatar 
+			alot easier). If you don't have a prefab, click and drag the avatar from the scene into Assets, and it will 
+			make a prefab.</p>
+			<img src="" alt="" />
+			<p style="color:green;"><b>Step 3: Quest Version</b></p>
+			<p>Drag the PC prefab into the scene, making a duplicate of the PC version. If the new avatar in the scene 
+			is different from the existing PC avatar, you did something wrong - go back to the prefab step.</p>
+			<p style="color:green;"><b>Step 4: Materials</b></p>
+			<p>Click on the first mesh and click on the material in element 0. This will show you where that material is 
+			in Assets.</p>
+			<img src="" alt="" />
+			<p>Click on the material in Assets and click Ctrl + D to duplicate (this only works in unity, Ctrl + D in most other 
+			programs deletes, so be careful). Then change the duplicated material shader to the correct quest compatible shader. Here 
+			is a guide on what shader to use for each material:</p>
+			<p>if it is</p>
+			<p>-opaque</p>
+			<p>-shiny/matcap</p>
+			<p>-metallic/specular</p>
+			<p>-emissive/glowing</p>
+			<p>-has more than one texture layer (detail, decal, etc)</p>
+			<p>-audio link</p>
+			<p>Then use VRChat &GT; Mobile &GT; Toon Standard</p>
+			<p>if it is</p>
+			<p>-transparent/translucent</p>
+			<p>-cutout</p>
+			<p>Then use VRChat &GT; Mobile &GT; Particles &GT; Additive or Multiply</p>
+			<p>Additive keeps light values, while Multiply keeps dark values. You need to pick which one to use based on the texture 
+			or color of the material. Also, the particle shaders get no light data or any layers or anything, so only use them 
+			for simple things such as glass, fishnets, etc.</p>
+			<p>&ldquo;My mesh is cutout but its the main piece&sol;I don't want it to be see-through&rdquo;. Sacrifice the cutout for the 
+			opaque Toon Standard. You can edit the texture and color the cutout bits to match the texture, so that its less noticeable.</p>
+			<ul class="gallery2">
+				<li>
+					<img src="" alt="" />
+				</li>
+				<li>
+					<img src="" alt="" />
+				</li>
+			</ul>
+			<ul class="gallery2">
+				<li>
+					<p>PC</p>
+				</li>
+				<li>
+					<p>Quest</p>
+				</li>
+			</ul>
+			<p>The particle shaders literally only get a texture slot - thats it. The tiling doesn't even work.</p>
+			<p>For Toon Standard, you want to look at the PC material and see what it does. Does it have specular/reflections? 
+			Matcap? Detail Layers>? Hue Shift? Audio Link? You can take the textures and masks from the PC material and put them 
+			in the matching slots on the Quest material.</p>
+			<ul class="gallery2">
+				<li>
+					<img src="" alt="" />
+				</li>
+				<li>
+					<img src="" alt="" />
+				</li>
+			</ul>
+			<ul class="gallery2">
+				<li>
+					<p>PC</p>
+				</li>
+				<li>
+					<p>Quest</p>
+				</li>
+			</ul>
+			<p>For shading, you can use flat, or whichever setting matches the PC material most closely. If your PC avatar uses 
+			lilToon, then you can right-click the PC material and click lilToon &GT; Generate Ramp. This will generate a shadow ramp 
+			that you can use for Custom shading in Toon Standard. Set the Shadow Tint to 0 to make it appear properly.</p>
+			<img class="wide" src="" alt="" />
+			<p>Limitations:</p>
+			<p>Toon Standard can only have one extra texture as a layer, known as the Detail layer. It also only has one Matcap slot 
+			and one emission slot, with the emission mask and color texture being combined into one texture slot. Audio link only 
+			has one effect per material for Quest. Some changes might have to be made to the textures or some features might need 
+			to be discarded when making the Quest material match the PC one as close as possible.</p>
+			<ul class="gallery2">
+				<li>
+					<img src="" alt="" />
+				</li>
+				<li>
+					<img src="" alt="" />
+				</li>
+			</ul>
+			<ul class="gallery2">
+				<li>
+					<p>PC</p>
+				</li>
+				<li>
+					<p>Quest</p>
+				</li>
+			</ul>
+			<p>I dropped the less important Matcap for the shiny metal one.</p>
+			<p>You can combine the main texture and any extra detail/decal layers in a texture editor. The detail layer in Toon 
+			Standard should be used for a layer that needs its offset controlled by an animation (scrolling, etc), or needs to 
+			be tiled (you can tile any image in an image tiler in your browser, but its a little bit more annoying).</p>
+			<p>Once you finish your first duplicated material, click and drag the new material into element 0 on the Quest version. Make 
+			sure everything looks right.</p>
+			<img class="wide" src="" alt="" />
+			<p>Do this for every material on every mesh :). Some meshes will re-use materials, so you can just slot in the exisitng Quest 
+			material you made instead of making a new one.</p>
+			<p style="color:green;"><b>Step 5: physbones</b></p>
+			<p>Quest avatars only get 8 physbone components and 64 physbone transforms. A component is literally the component you see 
+			in the inspector with all the settings. A transform is every bone the component effects or controls. There are tips to 
+			reducing physbone components and transforms in the <a href="Test.html">Physbone Section</a></p>
 		</article>
 		
 		<footer>
